@@ -1,105 +1,196 @@
-#navBar {
-  display: flex;
+:root {
+  --background-color:#111;
+  --font-color: #fff;
+  --form-font-color: #000000;   
+  --nav-link-color: #818181;
+  --input-background-color: #fff;
+  --active-background-color: #555;
+  --devname-color: rgb(0, 255, 208);
+  --devname-size: 50px;
+  --sidenav-width: 15%; 
+  --margin-h1: 10px;
+  --margin-h2:20px 0;
+  --font-size: 14px;
+  --h2-font-size:200%;
+}
+
+body * {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  margin: var(--margin-h1);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  margin:var(--margin-h2);
+}
+
+/* Allow images to be 100% or width of containing block */
+img {
+
+  max-width: 100%;
+}
+
+#devname {
+  color: var(--devname-color);
+  font-size: var(--devname-size);
+}
+
+/* Control styling of side navigation bar */
+.sidenav {
+  height: 100%; /* 100% of viewport height*/
+  width:var(--sidenav-width); /* width of nav bar*/
+  position: fixed; /* prevent movement while scrolling */
+  z-index: 1; /* keep side nav in front */
+  top: 0;  /* fix to top of viewport */
+  left: 0; /* fix to left side of viewport */
+  background-color: var(--background-color);
+  overflow-x: hidden;
+}
+
+
+/* Appearance of navigation menu links */
+.sidenav a {
+  display:flex;
   flex-direction: row;
-  margin: 0px 0%;
-}
-#navBar h1 {
-  width: 25%;
-  font-weight: 500;
-}
-#navigation {
-  display: flex;
-  width: 50%;
-  align-items: end;
-  justify-content: space-evenly;
-}
-#navigation p {
-  cursor: pointer;
+  flex-wrap: wrap;
+  padding: 6px 6px 6px 16px;
   text-decoration: none;
+  font-size: var(--font-size);
+  color: var(--nav-link-color);
+  display: block;
+}
+
+/* Appearance of nav links on hover and mouse-over */
+.sidenav a:hover {
+  color: var(--font-color);
+}
+
+.sidenav a:active {
+  background-color: var(--active-background-color);
+  color: var(--font-color);
+}
+
+/* Size Main section so it's not overlapped by sidenav */
+main {
+
+  /* Margin start is same as sidenav width plus .5px for a line*/
+  margin-left: calc(var(--sidenav-width) + 0.5px);
+  padding: 25px 10px;
+}
+
+.about-me p {
+  padding: 0 30px 0 30px;
+}
+
+.project-other {
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.project-other figure, .project-main figure {
+  border: .5px dotted var(--nav-link-color);
+  padding: 5px;
+}
+
+.project-other figure {
+  width: 33%;
+  margin:0;
+  justify-content:flex-start;
+}
+
+.project-other figure img {
+  width:100%;
+}
+
+/* Form styling */
+#contact-me {
+  /* Center form on page */
+  margin:0 auto;
+  /* form max width 50% of containing block */
+  max-width: 50%;
+  border: 1px solid white;
+}
+
+/* Stack form fields on each other*/
+#contact-form {
+  display:flex;
+  flex-direction: column;
+} 
+
+input {
+  background-color:var(--input-background-color);
+  color: var(--form-font-color);
+}
+
+textarea {
+  background-color:var(--input-background-color);
+  /* Max text message input 100% form width and min 200px tall */
+  min-height:200px;
+  width:100%;
+  color: var(--form-font-color);
 }
 
 
-* {
-  box-sizing: border-box;
+button {
+  background-color: var(--active-background-color);
+  margin: 10px 0;
+  max-width: 100px;
 }
 
-header{
-  display: flex;
+.footer {
+  /* padding at bottom of page */
+  height: 50px;
+
+}
+/* Media Queries for responsive design */
+
+/* Controls placement of navigation bar as screen size decreases */
+
+/* At 992px breakpoint, max 2 project figures per row */
+@media screen and (max-width: 992px) {
+  .project-other figure {
+      width:50%;
+  }
 }
 
+/* On screens that are less than 768px wide */
+@media screen and (max-width: 768px) {
+  /* Show project-other figures as a column, centered, width=75% ensures they stay smaller than the project-main figure */
+  .project-other {
+      margin: auto;
+      display:flex;
+      flex-direction: column;
+      /* Center the section in the parent */
+      justify-content: center;
+      /* center the project figures in the parent box */
+      align-items: center;
+      width:100%;
+  }
 
+  /* Contact Form */
+  .contact-form {
+      justify-content: center;
+      align-items: center;
+  }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
-}
+  /* Make the sidebar into a top bar */
+  .sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display:block;
+  }
 
-.hero{
-height: 200px;
-width: 100%;
-background-image: url("../images/02-hero-bg.jpg");
-background-size: cover;
-background-position: center;
-}
+  .sidenav #my-picture {
+      max-width: 200px;
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
+  .sidenav a {float: left;}
+  main {margin-left: 0;}
 
-p {
-  margin: 0;
-}
-
-
-.wrapper{
-  flex-grow:inherit;
-  display: grid:inline;
-  grid-template-columns: 1000px 500px 500px;
-  grid-template-rows: 500px 500px;
-  column-gap:10px; 
-  row-gap: 10px;
-  grid-template-areas:
-  "first_project second_project third_project fourth_project raphael_experience "
-  max-width: 1000px;
-}
-
-
-.images{
-position:relative;
-height: 100%;
-width: 100%;
-}
-
-.title_box{
-  position:relative;
-  height: 100%;
-  width: 100%;
-  
-}
-
-#first_project{
-  grid-area: first;
-}
-
-#second_project{
-  grid-area: second;
-}
-
-#third_project{
-  grid-area: third;
-}
-
-#fourth_project{
-  grid-area: fourth;
-}
-
-#raphael_experience{
-  grid-area: run;
 }

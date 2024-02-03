@@ -11,4 +11,4 @@ The web page provides
 
 ## Credits
 
-Made online resources and youtube video content
+Made using online resources and youtube video content. I have also used templates to fix errors.

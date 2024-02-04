@@ -10,31 +10,31 @@
 </head>
 
 <body>
-  <!-- hero banner -->
-  <section class="hero-banner">
-    <div class="hero-content"> <!-- Add a class to the div for easier styling -->
-      <img class="hero" src="./images/02-hero-bg.jpg" alt="hero_image">
-      <h2>Welcome to my portfolio!</h2>
-    </div>
-  </section>
 
-  <!-- main logo / nav -->
-  <header>
-    <h1>Cat Beckett</h1>
+  <div class="sidenav">
     <nav id="navBar">
-      <nav class="sidenav">
-        <a href="#about">About me</a>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div id="navigation">
-        <img src="./images/portfolioplacehoder.jpeg" alt="my_work" height="200" width="200">
-      </div>
+      <a href="#about">About me</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
     </nav>
-  </header>
+  </div>
 
   <main class="page-wrapper">
-    
+
+    <!-- hero banner -->
+    <section class="hero-banner">
+      <div class="hero-content">
+        <img class="hero" src="./images/02-hero-bg.jpg" alt="hero_image">
+        <h2>Welcome to my portfolio!</h2>
+      </div>
+    </section>
+
+    <!-- main logo / nav -->
+    <header>
+      <h1>Cat Beckett</h1>
+      <img src="./images/portfolioplacehoder.jpeg" alt="my_work" height="200" width="200">
+    </header>
+
     <!-- about me -->
     <section class="page-section" id="about">
       <h2>About Me</h2>
@@ -47,29 +47,44 @@
       <div class="wrapper"></div>
       <div class="grid-container">
         <div class="grid-item first-row">
-          <a href="https://filipkotanski.github.io/Digital-Nomad-App/">
-            <img class="images large-image" src="./images/Project2DN.png" alt="first_project">
-          </a>
+          <div class="grid-item-content">
+            <a href="https://filipkotanski.github.io/Digital-Nomad-App/">
+              <img class="images large-image" src="./images/Project2DN.png" alt="first_project">
+              <div class="image-title">Group project 1</div>
+            </a>
+          </div>
         </div>
         <div class="grid-item second-row">
-          <a href="https://catbeckett.github.io/Weather-Dashboard/">
-            <img class="images" src="./images/Project2WD.png" alt="second_project">
-          </a>
+          <div class="grid-item-content">
+            <a href="https://catbeckett.github.io/Weather-Dashboard/">
+              <img class="images" src="./images/Project2WD.png" alt="second_project">
+              <div class="image-title">Weather-Dashboard</div>
+            </a>
+          </div>
         </div>
         <div class="grid-item second-row">
-          <a href="https://catbeckett.github.io/Daily-Planner-App/">
-            <img class="images" src="./images/ProjectWP.png" alt="third_project">
-          </a>
+          <div class="grid-item-content">
+            <a href="https://catbeckett.github.io/Daily-Planner-App/">
+              <img class="images" src="./images/ProjectWP.png" alt="third_project">
+              <div class="image-title">Weekly-Planner</div>
+            </a>
+          </div>
         </div>
         <div class="grid-item third-row">
-          <a href="YOUR_FOURTH_PROJECT_LINK">
-            <img class="images" src="./images/02-portfolio-4.jpg" alt="fourth_project">
-          </a>
+          <div class="grid-item-content">
+            <a href="https://catbeckett.github.io/Console-Finances/">
+              <img class="images" src="./images/Deloyed-Console-Finance Screenshot.png" alt="fourth_project">
+              <div class="image-title">Console Finances</div>
+            </a>
+          </div>
         </div>
         <div class="grid-item third-row">
-          <a href="YOUR_FIFTH_PROJECT_LINK">
-            <img class="images" src="./images/Raphael_experience.jpeg" alt="Raphael_experience">
-          </a>
+          <div class="grid-item-content">
+            <a href="https://www.vam.ac.uk/articles/explore-the-raphael-cartoons#slideshow=3891&slide=0">
+              <img class="images" src="./images/Raphael_experience.jpeg" alt="Raphael_experience">
+              <div class="image-title">The Raphael Experience</div>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -78,14 +93,15 @@
     <section class="page-section" id="contact">
       <h2>Contact</h2>
       <form id="contact-form" action="/form/submit" method="post">
-        <label for="name">Name: </label><input name="name" type="name">
+        <label for="name">Name: </label><input name="name" type="text">
         <label for="email">Email: </label><input name="email" type="email">
-        <label for="phone">Telephone: </label><input name="phone" type="telephone">
-        <label for="message">Message</label><textarea name="message" class="message" type="text"></textarea>
+        <label for="phone">Telephone: </label><input name="phone" type="tel">
+        <label for="message">Message</label><textarea name="message" class="message"></textarea>
         <button type="submit" id="submit" class="btn btn-primary">Submit</button>
       </form>
     </section>
   </main>
+
   <footer>
     <div class="footer"></div>
   </footer>

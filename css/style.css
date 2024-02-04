@@ -1,45 +1,40 @@
 :root {
-  --background-color: #111;
-  --font-color: #fff;
+  --background-color: #1e3851;
+  --font-color: #d3e1ef;
   --form-font-color: #000000;
-  --nav-link-color: #818181;
-  --input-background-color: #fff;
-  --active-background-color: #555;
-  --devname-color: rgb(0, 255, 208);
+  --nav-link-color: #e5e6e8;
+  --input-background-color: #ffffff;
+  --active-background-color: #273133;
+  --devname-color: #273133;
   --devname-size: 50px;
   --sidenav-width: 10%;
   --margin-h1: 10px;
   --margin-h2: 20px 0;
-  --font-size: 14px;
+  --font-size: 20px;
   --h2-font-size: 200%;
 }
 
-/* CSS */
 /* Vertical alignment adjustment */
 .hero {
   max-width: 100%;
   height: auto;
-  max-height: 400px; /* Adjust the maximum height as needed */
+  max-height: 400px;
 }
 
-/*
-/* Ensure hero banner fills the width of the screen */
 .hero-banner {
   width: 100%;
-  overflow: hidden; /* Ensure the image doesn't overflow its container */
+  overflow: hidden;
 }
 
-/* Adjust the size of the hero image */
 .hero {
   width: 100%;
   height: auto;
 }
 
-
 /* Style for the hero banner content */
 .hero-content {
-  text-align: center; /* Center the content horizontally */
-  padding: 20px; /* Add some padding for better spacing */
+  text-align: center;
+  padding: 0px;
 }
 
 body * {
@@ -57,7 +52,6 @@ h2 {
   margin: var(--margin-h2);
 }
 
-/* Allow images to be 100% or width of containing block */
 img {
   max-width: 100%;
 }
@@ -67,7 +61,7 @@ img {
   font-size: var(--devname-size);
 }
 
-/* Control styling of side navigation bar */
+/* styling of side navigation bar */
 .sidenav {
   height: 100%;
   width: var(--sidenav-width);
@@ -79,7 +73,6 @@ img {
   overflow-x: hidden;
 }
 
-/* Appearance of navigation menu links */
 .sidenav a {
   display: flex;
   flex-direction: row;
@@ -91,7 +84,6 @@ img {
   display: block;
 }
 
-/* Appearance of nav links on hover and mouse-over */
 .sidenav a:hover {
   color: var(--font-color);
 }
@@ -101,40 +93,28 @@ img {
   color: var(--font-color);
 }
 
-/* Size Main section so it's not overlapped by sidenav */
 main {
-  /* Adjust the margin-left to create space for the sidebar */
-  margin-left: calc(var(--sidenav-width) + 40px); /* Adjust the value as needed */
-  padding: 25px 10px;
+  margin-left: var(--sidenav-width);
+  padding: 25px;
 }
 
-
-
-/* Adjust the navigation bar width to avoid overlapping */
 @media screen and (max-width: 768px) {
-  /* Make the sidebar into a top bar */
   .sidenav {
     width: 100%;
-    height: auto;
-    position: relative;
-    display: block;
-    z-index: 1; /* Ensure the sidebar is above the main content */
   }
 
   main {
-    margin-left: 0; /* Reset margin-left for smaller screens */
+    margin-left: 0;
   }
 }
 
-/* Ensure the avatar image is visible */
 .sidenav #navigation {
-  margin-top: 60px; /* Adjust this value as needed to position the avatar image below the navigation bar */
+  margin-top: 60px;
 }
 
-/* Update the navigation links for smaller screens */
 @media screen and (max-width: 768px) {
   .sidenav a {
-    padding: 12px 12px 12px 32px; /* Adjust padding for better spacing */
+    padding: 12px 12px 12px 32px;
   }
 }
 
@@ -147,7 +127,8 @@ main {
   flex-wrap: wrap;
 }
 
-.project-other figure, .project-main figure {
+.project-other figure,
+.project-main figure {
   border: 0.5px dotted var(--nav-link-color);
   padding: 5px;
 }
@@ -162,16 +143,12 @@ main {
   width: 100%;
 }
 
-/* Form styling */
 #contact-me {
-  /* Center form on page */
   margin: 0 auto;
-  /* form max width 50% of containing block */
   max-width: 50%;
   border: 1px solid white;
 }
 
-/* Stack form fields on each other*/
 #contact-form {
   display: flex;
   flex-direction: column;
@@ -184,7 +161,6 @@ input {
 
 textarea {
   background-color: var(--input-background-color);
-  /* Max text message input 100% form width and min 200px tall */
   min-height: 200px;
   width: 100%;
   color: var(--form-font-color);
@@ -197,31 +173,21 @@ button {
 }
 
 .footer {
-  /* padding at bottom of page */
   height: 50px;
 }
 
-/* Media Queries for responsive design */
-
-/* Controls placement of navigation bar as screen size decreases */
-
-/* At 992px breakpoint, max 2 project figures per row */
 @media screen and (max-width: 992px) {
   .project-other figure {
     width: 50%;
   }
 }
 
-/* On screens that are less than 768px wide */
 @media screen and (max-width: 768px) {
-  /* Show project-other figures as a column, centered, width=75% ensures they stay smaller than the project-main figure */
   .project-other {
     margin: auto;
     display: flex;
     flex-direction: column;
-    /* Center the section in the parent */
     justify-content: center;
-    /* center the project figures in the parent box */
     align-items: center;
     width: 100%;
   }
@@ -232,7 +198,6 @@ button {
     align-items: center;
   }
 
-  /* Make the sidebar into a top bar */
   .sidenav {
     width: 100%;
     height: auto;
@@ -253,54 +218,56 @@ button {
   }
 }
 
-/* Set specific dimensions for each image */
 .images {
   max-width: 100%;
   height: auto;
-  max-height: 300px; /* Set the maximum height for the images */
+  max-height: 300px;
 }
 
-/* Specify grid container properties */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 columns */
-  grid-template-rows: auto auto auto; /* 3 rows with automatic height */
-  gap: 20px; /* Adjust the gap between grid items */
-}
-
-/* Specify grid item properties */
-.grid-item {
-  width: 100%;
-  height: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto auto;
+  gap: 20px;
 }
 
 /* Specific styling for each grid item */
 .first-row {
-  grid-column: span 5; /* Make the item span across all columns */
-  grid-row: 1; /* Place it in the first row */
+  grid-column: span 4;
+  grid-row: 1;
 }
 
 .second-row {
-  grid-column: span 2; /* Make the item span across 2 columns */
-  grid-row: 2; /* Place it in the second row */
+  grid-column: span 2;
+  grid-row: 2;
 }
 
 .third-row {
-  grid-column: span 2; /* Make the item span across 2 columns */
-  grid-row: 3; /* Place it in the third row */
+  grid-column: span 2;
+  grid-row: 3;
 }
 
-/* Adjust margins for better spacing */
 .grid-item img {
-  margin: 0 auto; /* Center the image horizontally */
-  display: block; /* Ensure the image is displayed as a block element */
+  width: 100%;
+  object-fit: cover;
 }
 
-/* Media Queries for responsive design */
+.grid-item-content {
+  position: relative;
+}
 
-/* On screens that are less than 768px wide */
+.image-title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  font-size: 30px; /* Adjusted font size */
+  z-index: 1;
+}
+
 @media screen and (max-width: 768px) {
-  /* Make the sidebar into a top bar */
   .sidenav {
     width: 100%;
     height: auto;
@@ -308,7 +275,6 @@ button {
     display: block;
   }
 
-  /* Adjust padding for better spacing */
   .sidenav a {
     padding: 12px 12px 12px 32px;
   }

@@ -25,9 +25,6 @@ This web developer portfolio was created to display my skills, experience, and p
 
 To view the portfolio, simply open the `index.html` file in a web browser. The portfolio is fully responsive and can be viewed on different devices and screen sizes.
 
-## Contributing
-
-Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
 ## License
 

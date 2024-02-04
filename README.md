@@ -12,7 +12,7 @@ This repository contains the source code for my web developer portfolio. It show
 
 ## Introduction
 
-This web developer portfolio was created to display my skills, experience, and projects to potential clients or employers. It includes sections for an introduction, project showcase, and contact information.
+This web developer portfolio was created to display my skills, experience, and projects to potential clients or employers. It includes sections for an introduction, project showcase, and contact information. Please see a link to the deployed page here: https://catbeckett.github.io/Web-Portfolio/ 
 
 ## Features
 
@@ -36,3 +36,5 @@ This project is licensed under the [MIT License](LICENSE).
 ## Credits
 
 Made using online resources and youtube video content.
+/
+![Portfolio Screenshot](/images/Screenshot-deployedwebportfolio.png)
